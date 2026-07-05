@@ -1,0 +1,103 @@
+---
+import "../styles/Hero.css";
+
+type statistic = {
+    amount: string,
+    name: string    
+}
+const statistics: statistic[] = [
+  {
+    amount: "450+",
+    name: "Projects Done"
+  },
+  {
+    amount: "1.5k+",
+    name: "Active users"
+  },
+  {
+    amount: "850+",
+    name: "Lives Impacted"
+  },
+  {
+    amount: "10k+",
+    name: "Satisfied Clients"
+  }
+  ]
+
+  const services = [
+  {
+  title:"",
+  description:"",
+  BgColor: "#CBEBE8",
+  TitleColor: ""
+  },
+  {
+    title: "Web Design",
+    description: "Web design usually refers to the user experience aspects of website development rather than software development.",
+    BgColor:"#D9EECF",
+    TitleColor:"#56785F"
+  },
+  {
+    title: "Digital Transformation",
+    description: "Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies.",
+    BgColor:"#E8EFC6",
+    TitleColor:"#50572E"
+  }
+];
+---
+
+<section id="HeroSection">
+    <article id="sloganArticle">
+        <div id="slogan_container">
+            <p id="slogan">
+                <span style="font-weight:600;">Building Bridges</span><br />
+                <span style="font-weight:500;"
+                    >Between You And<br />
+                    Customer</span
+                >
+            </p>
+
+            <p id="slogan_subtitles">
+                Business ideas at the right price. Challenge everything. Keeping
+                advertising standards high. Research based advertising for the
+                bulls.
+            </p>
+
+            <div id="getStarted_Section">
+                <button>Get Started</button>
+                <p>Manage your Business. <br/> The professional way</p>
+                <button id="link_button"></button>
+                <button id="arrow_button"></button>
+            </div>
+        </div>
+        <div>
+            <img src="https://placehold.net/400x400.png" />
+
+            <div id="statistics_section">
+
+                {
+                    statistics.map((a) => (
+                    <div class="statistic">
+                        <h3>{a.amount}</h3>
+                        <p>{a.name}</p>
+                    </div>
+                    ))
+                }
+            </div>
+        </div>
+
+
+
+    </article>
+    
+        <section id="services">
+            {
+            services.map((a, i) => (
+            <div style={`background-color:${a.BgColor}; border-radius:${i == 0 ? "16px 0px 0px 16px" : i == services.length -1 ? "0px 16px 16px 0px" : ""};`} class="service">
+                <h3 style={`color:${a.TitleColor};`}>{a.title}</h3>
+                <p>{a.description}</p>
+            </div>
+            ))
+            }
+        </section>
+</section>

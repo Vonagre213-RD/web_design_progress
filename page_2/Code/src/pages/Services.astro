@@ -1,0 +1,63 @@
+---
+import "../styles/services.css";
+
+const features = [
+    {
+        title: "Easy-to-use dashboards",
+        src: "https://placehold.co/600x400",
+        description:
+            "Create intuitive, custom dashboards to visualise your most important metrics. No coding or technical skills required.",
+    },
+    {
+        title: "Real-time data updates",
+        src: "https://placehold.co/600x400",
+        description:
+            "Get the latest insights with real-time data refreshes. Stay on top of changes as they happen, keeping your team informed.",
+    },
+    {
+        title: "Collaborative analytics",
+        src: "https://placehold.co/600x400",
+        description:
+            "Share dashboards and reports with your team for seamless collaboration. Comment, edit, and review data insights together.",
+    },
+    {
+        title: "Automated reports",
+        src: "https://placehold.co/600x400",
+        description:
+            "Set up automated reports to be delivered directly to your inbox. Save time and focus on making decisions, not creating reports.",
+    },
+];
+---
+
+<section id="services_section">
+    <h2>Take Actions From Insights</h2>
+
+    <div id="services">
+        <div id="column1">
+
+            {features.slice(0,2).map((a) => (
+            <div class="service_box">
+            <img class="service_logo" src={a.src}/>
+            <span>  
+            <h3 class="service_title">{a.title}</h3>
+            <p class="service_description">{a.description}</p>
+            </span>
+            </div>
+
+            ))}
+        </div>
+        <div id="column2">
+
+            {features.slice(2,4).map((a) => (
+            <div class="service_box">
+            <img class="service_logo" src={a.src}/>
+            <span>  
+            <h3 class="service_title">{a.title}</h3>
+            <p class="service_description">{a.description}</p>
+            </span>
+            </div>
+
+            ))}
+        </div>
+    </div>
+</section>

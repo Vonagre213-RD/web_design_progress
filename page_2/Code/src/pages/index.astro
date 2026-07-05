@@ -1,0 +1,25 @@
+---
+import Header from "./Header.astro"
+import Hero from "./Hero.astro"
+import Services from "./Services.astro"
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+        <link rel="stylesheet" href="./src/styles/Index.css"/>
+    </head>
+    <body>
+        <Header/>
+
+        <main>
+            <Hero/>
+            <Services/>
+        </main>
+    </body>
+</html>

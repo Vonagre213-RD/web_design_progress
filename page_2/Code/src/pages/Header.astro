@@ -1,0 +1,50 @@
+---
+import "../styles/Header.css"
+
+
+const links = [
+
+    {
+        name:"Features",
+        href:"/"
+    },
+    {
+            name:"Pricing",
+            href:"/"
+    },
+    {
+
+    name:"About",
+    href:"/"
+    },
+    {
+    name:"Contact",
+    href:"/"
+    }
+]
+---
+
+
+<header>
+    <span>
+        <h1>Torch</h1>
+    
+
+    <nav>
+        <ul>
+            {
+                links.map((a) => (
+                    <li>
+                        <a href={`${a.href}`}>{a.name}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+
+    </span>
+
+    <button id="header_GetStarted">
+        Get Started
+    </button>
+</header>

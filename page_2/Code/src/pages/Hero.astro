@@ -1,0 +1,46 @@
+---
+import "../styles/hero.css";
+
+const sponsors = ["Someday","Accent", "Irene", "n*A"]
+---
+
+<section id="Hero">
+    <div>
+        <p id="slogan">Powerful Data insights for all</p>
+
+        <p id="subtitles">
+            Torch makes data analysis easy for everyone. Visualise key metrics,
+            track performance, and discover trends without needing a data
+            science background.
+        </p>
+
+        <div id="links_section">
+            <button id="GetStarted_button" class="link_section_button"
+                >Get Started
+            </button>
+            <button id="LearnMore_button" class="link_section_button"
+                >Learn more
+            </button>
+        </div>
+
+        <div id="sponsors_section">
+            {
+                sponsors.map((a) => (
+                    <p>{a}</p>
+                ))
+            }
+        </div>
+    </div>
+
+    <div id="statistic_section">
+        <div id="column1">
+            <div class="statistic_box"></div>
+            <div class="statistic_box"></div>
+        </div>
+
+        <div id="column2">
+            <div class="statistic_box"></div>
+            <div class="statistic_box"></div>
+        </div>
+    </div>
+</section>
